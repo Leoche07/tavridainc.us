@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 280" width="240" height="280">
+  <defs>
+    <style>
+      .bg { fill: #0b1a2e; }
+      .gold { fill: #d4a345; }
+      .gold-dark { fill: #b8862d; }
+      .blue { fill: #2a75d3; }
+      .blue-dark { fill: #1c5296; }
+      .white { fill: #ffffff; }
+      .text-serif { font-family: 'Times New Roman', Times, serif; font-weight: bold; text-anchor: middle; }
+      .text-sans { font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Outer Shield Border -->
+  <path d="M 20,20 C 80,5 160,5 220,20 L 220,160 C 220,220 120,270 120,270 C 120,270 20,220 20,160 Z" class="bg" stroke="#0b1a2e" stroke-width="4"/>
+  <path d="M 24,24 C 80,10 160,10 216,24 L 216,158 C 216,214 120,262 120,262 C 120,262 24,214 24,158 Z" fill="none" stroke="#d4a345" stroke-width="3"/>
+  <path d="M 28,28 C 80,15 160,15 212,28 L 212,156 C 212,208 120,254 120,254 C 120,254 28,208 28,156 Z" class="bg"/>
+
+  <!-- Sun -->
+  <!-- Rays -->
+  <path d="M 120,60 L 120,25 M 120,60 L 95,30 M 120,60 L 145,30 M 120,60 L 70,45 M 120,60 L 170,45 M 120,60 L 55,65 M 120,60 L 185,65" stroke="#d4a345" stroke-width="5" stroke-linecap="round"/>
+  <!-- Sun Body -->
+  <path d="M 85,75 A 35,35 0 0,1 155,75 Z" class="gold"/>
+
+  <!-- Sail -->
+  <path d="M 70,120 L 65,55 L 145,70 C 145,70 135,120 70,120 Z" class="gold"/>
+  <!-- Sail Blue Stripes -->
+  <path d="M 85,60 C 95,80 90,110 80,120 C 75,100 80,75 85,60 Z" class="blue"/>
+  <path d="M 115,65 C 125,85 120,115 110,120 C 105,100 110,75 115,65 Z" class="blue"/>
+  <!-- Sail Mast -->
+  <line x1="120" y1="50" x2="120" y2="110" stroke="#d4a345" stroke-width="4"/>
+
+  <!-- Ship Hull -->
+  <!-- Main body -->
+  <path d="M 60,140 C 60,140 100,165 160,140 C 160,140 140,115 155,95 C 165,105 160,120 170,115 C 165,125 180,130 150,150 C 110,170 50,140 60,140 Z" class="gold"/>
+  <!-- Dragon Head Details -->
+  <circle cx="160" cy="108" r="1.5" class="bg"/>
+  
+  <!-- Ship Accents/Lines -->
+  <path d="M 65,145 C 95,160 145,150 155,135" fill="none" stroke="#0b1a2e" stroke-width="2"/>
+  <path d="M 62,135 C 90,150 130,140 145,125" fill="none" stroke="#0b1a2e" stroke-width="2"/>
+
+  <!-- Oars -->
+  <line x1="100" y1="148" x2="65" y2="175" stroke="#d4a345" stroke-width="3" stroke-linecap="round"/>
+  <line x1="115" y1="150" x2="80" y2="175" stroke="#d4a345" stroke-width="3" stroke-linecap="round"/>
+  <line x1="130" y1="148" x2="95" y2="175" stroke="#d4a345" stroke-width="3" stroke-linecap="round"/>
+  <line x1="145" y1="140" x2="110" y2="170" stroke="#d4a345" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Water Waves -->
+  <path d="M 55,165 Q 80,155 105,165 T 155,165 T 185,160" fill="none" stroke="#2a75d3" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 90,175 Q 115,165 140,175 T 170,170" fill="none" stroke="#2a75d3" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Text -->
+  <text x="120" y="205" class="white text-serif" font-size="34" letter-spacing="1">TAVRIDA</text>
+  <text x="120" y="225" class="white text-sans" font-size="16" letter-spacing="0.5">USDOT 3405757</text>
+  <text x="120" y="245" class="white text-sans" font-size="16" letter-spacing="0.5">MC 1097048</text>
+</svg>
