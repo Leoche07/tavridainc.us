@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tavrida Inc — Trusted interstate trucking and freight logistics across the United States. Power-only, dry van, reefer, and open deck solutions." />
+  <title>Tavrida Inc | Interstate Trucking & Freight Logistics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Source+Sans+3:ital,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="tavrida-logo.svg" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg-main:    #0b1a2e;
+      --bg-alt:     #132d4a;
+      --bg-card:    #1a3a5c;
+      --text-main:  #f5f4f0;
+      --text-sec:   #a3b5ca;
+      --border-gold:rgba(200,152,44,0.25);
+      --navy:       #0b1a2e;
+      --navy-mid:   #132d4a;
+      --navy-soft:  #1a3a5c;
+      --blue:       #2a5f9e;
+      --blue-light: #3a75b8;
+      --accent:     #c8982c;
+      --accent-hover:#b5891f;
+      --accent-light:#e8c45a;
+      --gold-glow:  rgba(200,152,44,0.15);
+      --white:      #ffffff;
+      --off-white:  #f5f4f0;
+      --border:     #d5d2c8;
+      --radius:     4px;
+      --max:        1200px;
+      --font-head:  'Outfit', sans-serif;
+      --font-body:  'Source Sans 3', sans-serif;
+      --shadow-sm:  0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md:  0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
+      --shadow-lg:  0 10px 30px rgba(0,0,0,0.12), 0 4px 10px rgba(0,0,0,0.06);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--bg-main); color: var(--text-main); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
+
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* TOP BAR */
+    .topbar { background: var(--navy); padding: 0.45rem 0; }
+    .topbar-inner { max-width: var(--max); margin: 0 auto; padding: 0 2rem; display: flex; justify-content: flex-end; gap: 2rem; }
+    .topbar a { font-size: 0.8rem; color: rgba(255,255,255,0.65); display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
+    .topbar a:hover { color: #fff; }
+    .topbar svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 100; background: var(--bg-main); border-bottom: 1px solid var(--border-gold); box-shadow: var(--shadow-sm); }
+    .nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 2rem; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-main); display: flex; align-items: center; gap: 0.6rem; }
+    .nav-logo img { height: 45px; width: auto; flex-shrink: 0; }
+    .nav-links { display: flex; gap: 0.2rem; list-style: none; align-items: center; }
+    .nav-links a { font-size: 0.88rem; font-weight: 600; color: var(--text-sec); padding: 0.45rem 0.9rem; border-radius: var(--radius); transition: color 0.2s, background 0.2s; }
+    .nav-links a:hover { color: var(--text-main); background: var(--bg-alt); }
+    .nav-cta { background: var(--accent) !important; color: var(--navy) !important; font-weight: 700 !important; }
+    .nav-cta:hover { background: var(--accent-light) !important; color: var(--navy) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text-main); border-radius: 2px; }
+
+    /* HERO */
+    .hero { position: relative; height: 620px; display: flex; align-items: center; overflow: hidden; }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(105deg, rgba(11,26,46,0.96) 0%, rgba(11,26,46,0.88) 35%, rgba(11,26,46,0.6) 55%, rgba(19,45,74,0.3) 75%, rgba(200,152,44,0.08) 100%),
+        url('https://images.unsplash.com/photo-1619969624792-3df0128ea3c2?w=1800&auto=format&fit=crop&q=80') center / cover no-repeat;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 620px; }
+    .hero-badge { display: inline-flex; align-items: center; background: var(--accent); color: var(--navy); font-family: var(--font-head); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.35rem 0.85rem; border-radius: var(--radius); margin-bottom: 1.4rem; }
+    .hero h1 { font-family: var(--font-head); font-size: clamp(2.6rem, 5vw, 4.2rem); font-weight: 700; line-height: 1.05; color: #fff; margin-bottom: 1.2rem; }
+    .hero p { font-size: 1.05rem; font-weight: 300; color: rgba(255,255,255,0.82); line-height: 1.75; max-width: 500px; margin-bottom: 2.2rem; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.78rem 1.8rem; border-radius: var(--radius); font-family: var(--font-body); font-size: 0.92rem; font-weight: 600; cursor: pointer; border: none; transition: all 0.2s ease; }
+    .btn-primary { background: var(--accent); color: var(--navy); font-weight: 700; }
+    .btn-primary:hover { background: var(--accent-light); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(200,152,44,0.3); }
+    .btn-outline { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.5); }
+    .btn-outline:hover { border-color: white; transform: translateY(-1px); }
+    .btn-navy { background: var(--navy); color: white; }
+    .btn-navy:hover { background: var(--navy-mid); transform: translateY(-1px); }
+
+    /* STATS */
+    .stats-bar { background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-alt) 100%); position: relative; border-top: 3px solid var(--accent); border-bottom: 1px solid var(--border-gold); }
+    .stats-bar::after { display: none; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .stat-item { padding: 2.2rem 1.5rem; text-align: center; border-right: 1px solid rgba(255,255,255,0.07); }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: var(--font-head); font-size: 2.4rem; font-weight: 700; color: var(--accent-light); line-height: 1; margin-bottom: 0.3rem; }
+    .stat-label { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+
+    /* SECTION COMMONS */
+    section { padding: 6rem 0; }
+    .eyebrow { font-family: var(--font-head); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.7rem; }
+    .gold-divider { width: 60px; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-light)); border-radius: 2px; margin: 3rem auto; }
+    .section-h { font-family: var(--font-head); font-size: clamp(1.9rem, 3vw, 2.7rem); font-weight: 700; line-height: 1.1; color: var(--text-main); margin-bottom: 1rem; }
+    .section-sub { font-size: 1rem; font-weight: 300; color: var(--text-sec); line-height: 1.75; max-width: 520px; }
+
+    /* ABOUT */
+    .about { background: var(--bg-main); padding-top: 8.5rem; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .about-copy p { font-weight: 300; color: var(--text-sec); line-height: 1.8; margin-bottom: 1.1rem; }
+    .about-copy p:last-of-type { margin-bottom: 2rem; }
+    .about-img-wrap { position: relative; border-radius: 6px; overflow: hidden; box-shadow: var(--shadow-lg); border: 2px solid transparent; background-image: linear-gradient(var(--bg-main), var(--bg-main)), linear-gradient(135deg, var(--accent), transparent 60%); background-origin: border-box; background-clip: padding-box, border-box; }
+    .about-img-wrap img { width: 100%; height: 420px; object-fit: cover; }
+    .about-badge { position: absolute; bottom: 1.5rem; left: 1.5rem; background: var(--navy); color: white; padding: 0.9rem 1.3rem; border-radius: var(--radius); border-left: 3px solid var(--accent); }
+    .about-badge .num { font-family: var(--font-head); font-size: 2rem; font-weight: 700; line-height: 1; color: var(--accent-light); }
+    .about-badge .lbl { font-size: 0.75rem; color: rgba(255,255,255,0.6); letter-spacing: 0.06em; }
+
+    /* SERVICES */
+    .services { background: var(--bg-alt); border-top: 1px solid var(--border-gold); border-bottom: 1px solid var(--border-gold); }
+    .services-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1.5rem; }
+    .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .svc-card { background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: 6px; overflow: hidden; box-shadow: var(--shadow-sm); transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease; }
+    .svc-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); border-color: var(--accent); }
+    .svc-pricing { display: inline-block; background: var(--gold-glow); color: var(--accent-light); font-size: 0.82rem; font-weight: 600; padding: 0.35rem 0.7rem; border-radius: var(--radius); margin-top: 0.8rem; border: 1px solid rgba(200,152,44,0.2); }
+    .svc-photo { height: 200px; overflow: hidden; }
+    .svc-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .svc-card:hover .svc-photo img { transform: scale(1.05); }
+    .svc-body { padding: 1.6rem 1.8rem; }
+    .svc-num { font-family: var(--font-head); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.45rem; }
+    .svc-body h3 { font-family: var(--font-head); font-size: 1.35rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.6rem; }
+    .svc-body p { font-size: 0.92rem; font-weight: 300; color: var(--text-sec); line-height: 1.7; }
+
+    /* PARTNERS */
+    .partners { background: var(--bg-main); }
+    .partners-hd { margin-bottom: 3rem; }
+    .partners-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; }
+    .partner-card { background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: 6px; padding: 2.2rem 1.5rem; text-align: center; transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; position: relative; overflow: hidden; }
+    .partner-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-light)); transform: scaleX(0); transition: transform 0.3s ease; }
+    .partner-card:hover { border-color: var(--accent); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .partner-card:hover::before { transform: scaleX(1); }
+    .partner-name { font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.4rem; }
+    .partner-type { font-size: 0.75rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-sec); }
+
+    /* PHOTO BAND */
+    .photo-band { height: 400px; position: relative; overflow: hidden; }
+    .photo-band img { width: 100%; height: 100%; object-fit: cover; object-position: center 55%; }
+    .photo-band-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,26,46,0.92) 0%, rgba(11,26,46,0.65) 40%, rgba(19,45,74,0.25) 70%, rgba(200,152,44,0.05) 100%); display: flex; align-items: center; }
+    .photo-band-text { padding: 0 4rem; max-width: 540px; }
+    .photo-band-text h2 { font-family: var(--font-head); font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 700; color: white; line-height: 1.1; margin-bottom: 1rem; }
+    .photo-band-text p { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.78); margin-bottom: 1.8rem; }
+
+    /* WHY */
+    .why { background: var(--bg-alt); border-top: 1px solid var(--border-gold); }
+    .why-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .why-photo img { width: 100%; height: 500px; object-fit: cover; border-radius: 4px; box-shadow: var(--shadow-md); }
+    .why-list { margin-top: 2.5rem; }
+    .why-item { display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.4rem 0; border-bottom: 1px solid var(--border-gold); }
+    .why-item:first-child { border-top: 1px solid var(--border-gold); }
+    .why-icon { width: 42px; height: 42px; min-width: 42px; background: var(--accent); border-radius: 3px; display: flex; align-items: center; justify-content: center; }
+    .why-icon svg { width: 18px; height: 18px; stroke: var(--bg-main); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .why-item h4 { font-family: var(--font-head); font-size: 1rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.2rem; }
+    .why-item p { font-size: 0.9rem; font-weight: 300; color: var(--text-sec); line-height: 1.6; }
+
+    /* CONTACT */
+    .contact { background: var(--bg-main); border-top: 1px solid var(--border-gold); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .contact-info p.lead { font-size: 1rem; font-weight: 300; color: var(--text-sec); line-height: 1.75; margin-bottom: 2rem; }
+    .cinfo-item { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem; }
+    .cinfo-icon { width: 44px; height: 44px; min-width: 44px; background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: 3px; display: flex; align-items: center; justify-content: center; }
+    .cinfo-icon svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .cinfo-label { font-size: 0.73rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-sec); margin-bottom: 0.2rem; }
+    .cinfo-value { font-size: 1rem; color: var(--text-main); }
+    .contact-form { background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: 6px; padding: 2.4rem; box-shadow: var(--shadow-sm); }
+    .contact-form h3 { font-family: var(--font-head); font-size: 1.3rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.6rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { margin-bottom: 1.1rem; }
+    .form-group label { display: block; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-sec); margin-bottom: 0.4rem; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; background: var(--bg-main); border: 1px solid var(--border-gold); border-radius: var(--radius); padding: 0.68rem 0.9rem; font-family: var(--font-body); font-size: 0.92rem; color: var(--text-main); transition: border-color 0.2s, box-shadow 0.2s; outline: none; appearance: none; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--gold-glow); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-submit { width: 100%; background: var(--accent); color: var(--navy); padding: 0.85rem; font-family: var(--font-head); font-size: 1rem; font-weight: 700; letter-spacing: 0.07em; border: none; border-radius: var(--radius); cursor: pointer; transition: background 0.2s, transform 0.2s; margin-top: 0.4rem; }
+    .form-submit:hover { background: var(--accent-light); transform: translateY(-1px); }
+
+    /* FOOTER */
+    footer { background: linear-gradient(180deg, var(--navy-mid) 0%, var(--navy) 100%); color: rgba(255,255,255,0.7); padding: 4.5rem 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 2.2fr 1fr 1fr 1.4fr; gap: 3rem; padding-bottom: 3rem; }
+    .footer-logo { font-family: var(--font-head); font-size: 1.6rem; font-weight: 700; color: white; display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; letter-spacing: 0.05em; }
+    .footer-logo img { height: 60px; width: auto; flex-shrink: 0; }
+    .footer-brand p { font-size: 0.88rem; font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1.75; max-width: 280px; }
+    .footer-col h4 { font-family: var(--font-head); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.38); margin-bottom: 1.2rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.6rem; }
+    .footer-col li a { font-size: 0.9rem; font-weight: 300; color: rgba(255,255,255,0.55); transition: color 0.2s; }
+    .footer-col li a:hover { color: white; }
+    .fcr { display: flex; gap: 0.65rem; align-items: flex-start; margin-bottom: 0.9rem; }
+    .fcr svg { width: 14px; height: 14px; min-width: 14px; stroke: rgba(255,255,255,0.38); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; margin-top: 3px; }
+    .fcr span { font-size: 0.88rem; font-weight: 300; color: rgba(255,255,255,0.55); line-height: 1.55; }
+    .footer-divider { border: none; border-top: 1px solid rgba(200,152,44,0.15); }
+    .footer-bottom { padding: 1.5rem 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.28); }
+    .footer-btm-links { display: flex; gap: 1.8rem; }
+    .footer-btm-links a { font-size: 0.8rem; color: rgba(255,255,255,0.28); transition: color 0.2s; }
+    .footer-btm-links a:hover { color: rgba(255,255,255,0.6); }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 68px; left: 0; right: 0; background: var(--bg-main); border-bottom: 1px solid var(--border-gold); padding: 1.5rem 2rem; gap: 0.2rem; box-shadow: var(--shadow-md); }
+      .nav-links.open a { font-size: 1rem; padding: 0.7rem 0.9rem; }
+      .about-grid, .contact-grid, .why-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .partners-grid { grid-template-columns: repeat(3, 1fr); }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .photo-band-text { padding: 0 2rem; }
+    }
+    @media (max-width: 600px) {
+      .container { padding: 0 1.2rem; }
+      section { padding: 4rem 0; }
+      .partners-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero { height: auto; padding: 5rem 0 4rem; }
+      .hero-actions { flex-direction: column; }
+      .btn { width: 100%; justify-content: center; }
+      .photo-band { height: 480px; }
+      .photo-band-text { padding: 0 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a href="tel:2394707345">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.53 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 5.55 5.55l.91-.91a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (239) 470-7345
+      </a>
+      <a href="#contact">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Mansfield, OH
+      </a>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="tavrida-logo.svg" alt="Tavrida Inc Logo" />
+        TAVRIDA INC
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#partners">Partners</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge reveal">Interstate Freight Solutions</div>
+        <h1 class="reveal reveal-delay-1">Reliable Freight.<br>On Time. Every Time.</h1>
+        <p class="reveal reveal-delay-2">Tavrida Inc delivers trusted interstate trucking solutions across the United States — backed by experienced operators, established partner networks, and 24/7 dispatch support.</p>
+        <div class="hero-actions reveal reveal-delay-3">
+          <a href="#contact" class="btn btn-primary">Request a Quote</a>
+          <a href="#services" class="btn btn-outline">View Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal"><div class="stat-num">24/7</div><div class="stat-label">Dispatch Support</div></div>
+        <div class="stat-item reveal reveal-delay-1"><div class="stat-num">48</div><div class="stat-label">States Served</div></div>
+        <div class="stat-item reveal reveal-delay-2"><div class="stat-num">5+</div><div class="stat-label">Major Partners</div></div>
+        <div class="stat-item reveal reveal-delay-3"><div class="stat-num">99%</div><div class="stat-label">On-Time Performance</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <div class="eyebrow">About Tavrida Inc</div>
+          <h2 class="section-h">A Carrier Built for the Long Haul</h2>
+          <p>Tavrida Inc is a trusted interstate trucking company headquartered in Mansfield, Ohio. We deliver reliable freight solutions across the United States, combining operational efficiency with a genuine commitment to driver and customer success.</p>
+          <p>Our team understands the demands of the road from firsthand experience. From power-only partnerships with major shippers to specialized reefer and open deck hauls, we bring the right equipment, the right people, and the right attitude to every load.</p>
+          <a href="#contact" class="btn btn-navy">Work With Us</a>
+        </div>
+        <div class="about-img-wrap reveal reveal-delay-2">
+          <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&auto=format&fit=crop&q=80" alt="Semi truck on the open highway" />
+          <div class="about-badge">
+            <div class="num">24/7</div>
+            <div class="lbl">Operations Support</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services-header">
+        <div class="reveal">
+          <div class="eyebrow">What We Haul</div>
+          <h2 class="section-h">Our Freight Services</h2>
+        </div>
+        <p class="section-sub reveal reveal-delay-1">We match the right equipment and expertise to every load — from ambient dry van freight to temperature-sensitive and oversized cargo.</p>
+      </div>
+      <div class="services-grid">
+        <div class="svc-card reveal">
+          <div class="svc-photo"><img src="https://images.unsplash.com/photo-1626121300305-def4dc305387?w=800&auto=format&fit=crop&q=80" alt="Power only trucking operation" /></div>
+          <div class="svc-body">
+            <div class="svc-num">Service 01</div>
+            <h3>Power Only</h3>
+            <p>We provide the tractor — you provide the trailer. Our power-only operations run within the networks of Amazon, JB Hunt, and USPS, giving drivers consistent lanes and stable income without trailer ownership overhead.</p>
+          </div>
+        </div>
+        <div class="svc-card reveal reveal-delay-1">
+          <div class="svc-photo"><img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&auto=format&fit=crop&q=80" alt="Dry van freight hauling" /></div>
+          <div class="svc-body">
+            <div class="svc-num">Service 02</div>
+            <h3>Dry Van</h3>
+            <p>General freight hauling in fully enclosed trailers. Suitable for palletized goods, consumer products, manufacturing components, and retail distribution — protected, on schedule, across 48 states.</p>
+            <div class="svc-pricing">Trailer rental from $500/month — maintenance & insurance included</div>
+          </div>
+        </div>
+        <div class="svc-card reveal reveal-delay-2">
+          <div class="svc-photo"><img src="https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?w=800&auto=format&fit=crop&q=80" alt="Refrigerated reefer trucking" /></div>
+          <div class="svc-body">
+            <div class="svc-num">Service 03</div>
+            <h3>Reefer</h3>
+            <p>Temperature-controlled transport for perishables, pharmaceuticals, and specialty goods. Maintaining precise conditions from pickup through final delivery is a standard we don't compromise on.</p>
+            <div class="svc-pricing">Trailer rental from $1,500/month</div>
+          </div>
+        </div>
+        <div class="svc-card reveal reveal-delay-3">
+          <div class="svc-photo"><img src="https://images.unsplash.com/photo-1494412552100-42e4e7a74ec6?w=800&auto=format&fit=crop&q=80" alt="Flatbed open deck freight" /></div>
+          <div class="svc-body">
+            <div class="svc-num">Service 04</div>
+            <h3>Open Deck</h3>
+            <p>Flatbed and step-deck solutions for oversized, heavy, or irregularly shaped loads. Construction materials, industrial machinery, and specialized equipment hauled safely and compliantly.</p>
+            <div class="svc-pricing">Trailer rental from $1,500/month</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="partners" id="partners">
+    <div class="container">
+      <div class="partners-hd reveal">
+        <div class="eyebrow">Trusted By Industry Leaders</div>
+        <h2 class="section-h">Our Operating Partners</h2>
+        <p class="section-sub">We operate within established freight networks, providing reliable capacity for some of the largest logistics organizations in the country.</p>
+      </div>
+      <div class="partners-grid">
+        <div class="partner-card reveal">
+          <div class="partner-name">AMAZON</div>
+          <div class="partner-type">Relay & DSP Freight Network</div>
+        </div>
+        <div class="partner-card reveal reveal-delay-1">
+          <div class="partner-name">JB HUNT</div>
+          <div class="partner-type">Dedicated Contract Services</div>
+        </div>
+        <div class="partner-card reveal reveal-delay-2">
+          <div class="partner-name">USPS</div>
+          <div class="partner-type">Postal Service Freight Lanes</div>
+        </div>
+        <div class="partner-card reveal reveal-delay-3">
+          <div class="partner-name">UPS</div>
+          <div class="partner-type">Freight & Ground Operations</div>
+        </div>
+        <div class="partner-card reveal reveal-delay-3">
+          <div class="partner-name">FEDEX</div>
+          <div class="partner-type">Contract Carrier Services</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO BAND -->
+  <div class="photo-band">
+    <img src="https://images.unsplash.com/photo-1596969832010-09f775202118?w=1800&auto=format&fit=crop&q=80" alt="Trucks on the open highway" />
+    <div class="photo-band-overlay">
+      <div class="photo-band-text">
+        <h2>Ready to Move Your Freight?</h2>
+        <p>Consistent loads, competitive rates, and a team that keeps your freight moving — for both shippers and owner-operators.</p>
+        <a href="#contact" class="btn btn-primary">Contact Us Today</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY US -->
+  <section class="why" id="why">
+    <div class="container">
+      <div class="why-layout">
+        <div class="reveal">
+          <div class="eyebrow">Why Choose Tavrida</div>
+          <h2 class="section-h">What Sets Us Apart</h2>
+          <p class="section-sub">We are a carrier with established relationships, real support, and a team invested in getting every load where it needs to go — safely and on time.</p>
+          <div class="why-list">
+            <div class="why-item">
+              <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div><h4>FMCSA Compliant Operations</h4><p>All drivers and equipment comply with federal safety regulations. We maintain full documentation and never compromise on compliance.</p></div>
+            </div>
+            <div class="why-item">
+              <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div><h4>24/7 Dispatch Team</h4><p>Our operations staff is reachable around the clock. Real people answer when drivers or shippers have issues on the road.</p></div>
+            </div>
+            <div class="why-item">
+              <div class="why-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+              <div><h4>Steady Loads, Competitive Pay</h4><p>Partnering with major shippers means fewer dead miles and more predictable earnings for owner-operators in our network.</p></div>
+            </div>
+            <div class="why-item">
+              <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+              <div><h4>Experienced Leadership</h4><p>Our team has deep roots in transportation logistics and understands what it takes to run a dependable freight operation day in and day out.</p></div>
+            </div>
+            <div class="why-item">
+              <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+              <div><h4>Fuel Discount Program</h4><p>Owner-operators in our network have access to partnered fuel discount programs with savings of up to $0.90 per gallon at participating locations nationwide.</p></div>
+            </div>
+            <div class="why-item">
+              <div class="why-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+              <div><h4>Full ELD Compliance Support</h4><p>ELD compliance assistance is provided as part of our 24/7 dispatch operations, helping drivers maintain accurate records and stay in full regulatory compliance.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="why-photo reveal reveal-delay-2">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop&q=80" alt="Professional truck driver" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="eyebrow">Get In Touch</div>
+          <h2 class="section-h">Let's Talk Freight</h2>
+          <p class="lead">Whether you're a shipper with a freight challenge or an owner-operator looking for steady work, we'd like to hear from you. We respond promptly.</p>
+          <div class="cinfo-item">
+            <div class="cinfo-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.53 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 5.55 5.55l.91-.91a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><div class="cinfo-label">Phone</div><div class="cinfo-value">(239) 470-7345</div></div>
+          </div>
+          <div class="cinfo-item">
+            <div class="cinfo-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="cinfo-label">Office Address</div><div class="cinfo-value">379 Lexington Ave<br>Mansfield, OH 44907</div></div>
+          </div>
+          <div class="cinfo-item">
+            <div class="cinfo-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <div><div class="cinfo-label">Dispatch</div><div class="cinfo-value">Available 24 hours, 7 days a week</div></div>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            <div class="form-row">
+              <div class="form-group"><label>First Name</label><input type="text" placeholder="John" /></div>
+              <div class="form-group"><label>Last Name</label><input type="text" placeholder="Doe" /></div>
+            </div>
+            <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@company.com" /></div>
+            <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="(555) 000-0000" /></div>
+            <div class="form-group">
+              <label>Inquiry Type</label>
+              <select>
+                <option value="">Select one...</option>
+                <option>Freight Quote</option>
+                <option>Owner-Operator Inquiry</option>
+                <option>Brokerage / Partnership</option>
+                <option>General Question</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Message</label><textarea placeholder="Describe your freight needs or what you're looking for..."></textarea></div>
+            <button class="form-submit" onclick="handleSubmit(event)">Send Message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="tavrida-logo.svg" alt="Tavrida Inc Logo" />
+            TAVRIDA INC
+          </div>
+          <p>Trusted interstate trucking and freight logistics across the United States. Power-only, dry van, reefer, and open deck — backed by 24/7 support and a team that delivers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Power Only</a></li>
+            <li><a href="#services">Dry Van</a></li>
+            <li><a href="#services">Reefer</a></li>
+            <li><a href="#services">Open Deck</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#partners">Our Partners</a></li>
+            <li><a href="#why">Why Tavrida</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="fcr">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.53 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 5.55 5.55l.91-.91a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>(239) 470-7345</span>
+          </div>
+          <div class="fcr">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>379 Lexington Ave<br>Mansfield, OH 44907</span>
+          </div>
+          <div class="fcr">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Dispatch available 24/7</span>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tavrida Inc. All rights reserved. Mansfield, Ohio.</p>
+        <div class="footer-btm-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
+      else io.observe(el);
+    });
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target;
+      btn.textContent = "Message Sent — We'll Be in Touch";
+      btn.style.background = '#276749';
+      setTimeout(() => { btn.textContent = 'Send Message'; btn.style.background = ''; }, 4000);
+    }
+  </script>
+</body>
+</html>
