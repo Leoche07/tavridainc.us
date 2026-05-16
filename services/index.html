@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tavrida Inc freight services — Power Only, Dry Van, Reefer, and Open Deck. Full equipment specs, lanes, and contract terms." />
+  <title>Services | Tavrida Inc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Source+Sans+3:ital,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/Tavrida_Logo_2.png" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 24/7 Dispatch Available</span>
+        <span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Mansfield, OH — Serving 48 States</span>
+      </div>
+      <div class="topbar-right">
+        <a href="tel:2394707345"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.53 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 5.55 5.55l.91-.91a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (239) 470-7345</a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/Tavrida_Logo_2.png" alt="Tavrida Inc Logo" />
+        <span>TAVRIDA INC<small>INTERSTATE TRUCKING</small></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/services/" class="active">Services</a></li>
+        <li><a href="/partners/">Partners</a></li>
+        <li><a href="/why/">Why Us</a></li>
+        <li><a href="/contact/" class="nav-cta">Get a Quote</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a><span class="sep">/</span>Services</div>
+      <h1 class="reveal">Freight Services Built for Every Load</h1>
+      <p class="lead reveal reveal-delay-1">From power-only contract lanes to temperature-sensitive reefer and oversized flatbed work — we have the right equipment, the right people, and the right experience for the job.</p>
+    </div>
+  </section>
+
+  <!-- POWER ONLY -->
+  <section class="svc-detail" id="power-only">
+    <div class="container">
+      <div class="svc-detail-grid">
+        <div class="reveal">
+          <div class="eyebrow">Service 01</div>
+          <h2>Power Only</h2>
+          <div class="section-divider"></div>
+          <p class="lead">We provide the tractor — the shipper or broker provides the trailer. Power-only contracts give our operators steady, predictable work inside the country's largest freight networks without the overhead of trailer ownership.</p>
+          <ul class="svc-feature-list">
+            <li>Approved capacity for Amazon Relay, JB Hunt, USPS, UPS, and FedEx</li>
+            <li>Consistent lanes — fewer dead miles, more predictable income</li>
+            <li>Drop-and-hook operations at established freight hubs</li>
+            <li>24/7 dispatch backup for breakdowns, detention, and reroutes</li>
+          </ul>
+          <div class="svc-spec-row">
+            <div class="svc-spec"><div class="k">Equipment</div><div class="v">Day Cab & Sleeper Tractors</div></div>
+            <div class="svc-spec"><div class="k">Coverage</div><div class="v">48 States</div></div>
+          </div>
+          <div class="mt-2"><a href="/contact/" class="btn btn-primary">Inquire About Power Only</a></div>
+        </div>
+        <div class="svc-detail-img reveal reveal-delay-2">
+          <div class="svc-detail-tag">Power Only</div>
+          <!-- TODO: driver hooking up tractor to trailer (5th wheel) -->
+          <img src="https://images.unsplash.com/photo-1586191582056-b7f0fee47e7e?w=1100&auto=format&fit=crop&q=85" alt="Driver hooking up a tractor to a trailer" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DRY VAN -->
+  <section class="svc-detail" id="dry-van">
+    <div class="container">
+      <div class="svc-detail-grid reverse">
+        <div class="reveal">
+          <div class="eyebrow">Service 02</div>
+          <h2>Dry Van</h2>
+          <div class="section-divider"></div>
+          <p class="lead">General freight in fully enclosed 53-foot trailers. Suitable for palletized goods, packaged consumer products, manufacturing components, retail distribution, and any cargo that needs protection from weather and tampering.</p>
+          <ul class="svc-feature-list">
+            <li>53' enclosed dry van trailers, well-maintained and DOT compliant</li>
+            <li>Air-ride suspension for sensitive cargo</li>
+            <li>Long-haul, regional, and dedicated lane options</li>
+            <li>Trailer rental available for owner-operators in our network</li>
+          </ul>
+          <div class="svc-spec-row">
+            <div class="svc-spec"><div class="k">Trailer Length</div><div class="v">53 ft</div></div>
+            <div class="svc-spec"><div class="k">Max Payload</div><div class="v">~45,000 lbs</div></div>
+          </div>
+          <div class="svc-pricing mt-2">Trailer rental from $500/month — maintenance & insurance included</div>
+          <div class="mt-2"><a href="/contact/" class="btn btn-primary">Inquire About Dry Van</a></div>
+        </div>
+        <div class="svc-detail-img reveal reveal-delay-2">
+          <div class="svc-detail-tag">Dry Van</div>
+          <!-- TODO: 53' enclosed dry van trailer (NOT the same photo as hero or power only) -->
+          <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1100&auto=format&fit=crop&q=85" alt="Dry van enclosed trailer on the highway" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REEFER -->
+  <section class="svc-detail" id="reefer">
+    <div class="container">
+      <div class="svc-detail-grid">
+        <div class="reveal">
+          <div class="eyebrow">Service 03</div>
+          <h2>Reefer</h2>
+          <div class="section-divider"></div>
+          <p class="lead">Temperature-controlled transport for perishables, pharmaceuticals, fresh produce, and specialty goods. Maintaining precise conditions from pickup through final delivery is a standard we don't compromise on.</p>
+          <ul class="svc-feature-list">
+            <li>Reefer trailers with continuous temperature monitoring</li>
+            <li>Frozen, refrigerated, and protect-from-freeze service</li>
+            <li>FSMA Sanitary Transportation Rule compliant</li>
+            <li>Dispatch monitors reefer alarms in real time</li>
+          </ul>
+          <div class="svc-spec-row">
+            <div class="svc-spec"><div class="k">Temp Range</div><div class="v">-20°F to +70°F</div></div>
+            <div class="svc-spec"><div class="k">Trailer</div><div class="v">53' Reefer</div></div>
+          </div>
+          <div class="svc-pricing mt-2">Trailer rental from $1,500/month</div>
+          <div class="mt-2"><a href="/contact/" class="btn btn-primary">Inquire About Reefer</a></div>
+        </div>
+        <div class="svc-detail-img reveal reveal-delay-2">
+          <div class="svc-detail-tag">Reefer</div>
+          <!-- TODO: refrigerated trailer with visible Carrier/Thermo King reefer unit on front -->
+          <img src="https://images.unsplash.com/photo-1611288875785-f10a3a2efcec?w=1100&auto=format&fit=crop&q=85" alt="Refrigerated reefer trailer with cooling unit" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPEN DECK -->
+  <section class="svc-detail" id="open-deck">
+    <div class="container">
+      <div class="svc-detail-grid reverse">
+        <div class="reveal">
+          <div class="eyebrow">Service 04</div>
+          <h2>Open Deck</h2>
+          <div class="section-divider"></div>
+          <p class="lead">Flatbed and step-deck solutions for oversized, heavy, or irregularly shaped loads. Construction materials, industrial machinery, steel coils, lumber, and specialized equipment — secured properly and hauled compliantly.</p>
+          <ul class="svc-feature-list">
+            <li>48' and 53' flatbed trailers; step-deck available</li>
+            <li>Tarps, straps, chains, and edge protection on every load</li>
+            <li>Permit support for oversized and overweight loads</li>
+            <li>Securement trained drivers — no improvised tie-downs</li>
+          </ul>
+          <div class="svc-spec-row">
+            <div class="svc-spec"><div class="k">Trailer</div><div class="v">48' / 53' Flatbed</div></div>
+            <div class="svc-spec"><div class="k">Max Payload</div><div class="v">~48,000 lbs</div></div>
+          </div>
+          <div class="svc-pricing mt-2">Trailer rental from $1,500/month</div>
+          <div class="mt-2"><a href="/contact/" class="btn btn-primary">Inquire About Open Deck</a></div>
+        </div>
+        <div class="svc-detail-img reveal reveal-delay-2">
+          <div class="svc-detail-tag">Open Deck</div>
+          <!-- TODO: flatbed trailer with strapped/tarped cargo (lumber, steel, machinery) -->
+          <img src="https://images.unsplash.com/photo-1635868167930-b1c8a45a8c92?w=1100&auto=format&fit=crop&q=85" alt="Flatbed open deck trailer with secured cargo" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ / EQUIPMENT NOTE -->
+  <section class="partners">
+    <div class="container">
+      <div class="partners-hd reveal">
+        <div class="eyebrow">Equipment & Operations</div>
+        <h2 class="section-h">More Than Just Trucks</h2>
+        <div class="section-divider"></div>
+        <p class="section-sub">What every Tavrida load includes — regardless of service type.</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3>Real-Time Tracking</h3>
+          <p>ELD-integrated location updates on every active load. Shippers know where their freight is.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Cargo Insurance</h3>
+          <p>Standard $100,000 cargo coverage on every load. Higher limits available on request.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <h3>Verified Carriers</h3>
+          <p>Active authority, current insurance, and clean safety scores on file with every load.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-strip">
+    <div class="cta-strip-inner">
+      <div>
+        <h2>Need a Quote on a Specific Lane?</h2>
+        <p>Tell us origin, destination, and equipment — we'll respond fast.</p>
+      </div>
+      <a href="/contact/" class="btn">Request Quote</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="/Tavrida_Logo_2.png" alt="Tavrida Inc Logo" />TAVRIDA INC</div>
+          <p>Trusted interstate trucking and freight logistics across the United States. Power-only, dry van, reefer, and open deck — backed by 24/7 support and a team that delivers.</p>
+          <div class="dot-list"><span>FMCSA Compliant</span><span>DOT Registered</span><span>Fully Insured</span></div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/services/#power-only">Power Only</a></li>
+            <li><a href="/services/#dry-van">Dry Van</a></li>
+            <li><a href="/services/#reefer">Reefer</a></li>
+            <li><a href="/services/#open-deck">Open Deck</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/partners/">Our Partners</a></li>
+            <li><a href="/why/">Why Tavrida</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="fcr"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.53 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 5.55 5.55l.91-.91a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:2394707345">(239) 470-7345</a></div>
+          <div class="fcr"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>379 Lexington Ave<br>Mansfield, OH 44907</span></div>
+          <div class="fcr"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Dispatch available 24/7</span></div>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tavrida Inc. All rights reserved. Mansfield, Ohio.</p>
+        <div class="footer-btm-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
+      else io.observe(el);
+    });
+  </script>
+</body>
+</html>
