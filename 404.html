@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | Tavrida Inc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Source+Sans+3:ital,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/Tavrida_Logo_2.png" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <style>
+    .err { min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem; }
+    .err-code { font-family: var(--font-head); font-size: clamp(6rem, 14vw, 11rem); font-weight: 800; color: var(--accent-light); line-height: 1; letter-spacing: -0.04em; opacity: 0.9; }
+    .err h1 { font-family: var(--font-head); font-size: clamp(1.8rem, 3vw, 2.6rem); margin: 1rem 0 1rem; }
+    .err p { color: var(--text-sec); max-width: 480px; margin: 0 auto 2rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/Tavrida_Logo_2.png" alt="Tavrida Inc Logo" />
+        <span>TAVRIDA INC<small>INTERSTATE TRUCKING</small></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/partners/">Partners</a></li>
+        <li><a href="/why/">Why Us</a></li>
+        <li><a href="/contact/" class="nav-cta">Get a Quote</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <div class="err">
+    <div>
+      <div class="err-code">404</div>
+      <h1>This Lane Doesn't Exist</h1>
+      <p>The page you were looking for has been moved, retired, or never existed. Let's get you back on the route.</p>
+      <div class="flex-row" style="justify-content:center;">
+        <a href="/" class="btn btn-primary">Back to Home</a>
+        <a href="/contact/" class="btn btn-navy">Contact Dispatch</a>
+      </div>
+    </div>
+  </div>
+
+  <script>function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}</script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Tavrida Inc — an Ohio-based interstate trucking company built on integrity, experience, and dependable freight execution." />
+  <title>About | Tavrida Inc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Source+Sans+3:ital,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/Tavrida_Logo_2.png" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 24/7 Dispatch Available</span>
+        <span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Mansfield, OH — Serving 48 States</span>
+      </div>
+      <div class="topbar-right">
+        <a href="tel:2394707345"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.53 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 5.55 5.55l.91-.91a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (239) 470-7345</a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/Tavrida_Logo_2.png" alt="Tavrida Inc Logo" />
+        <span>TAVRIDA INC<small>INTERSTATE TRUCKING</small></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/" class="active">About</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/partners/">Partners</a></li>
+        <li><a href="/why/">Why Us</a></li>
+        <li><a href="/contact/" class="nav-cta">Get a Quote</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="--bg:url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1920&auto=format&fit=crop&q=85');">
+    <div class="page-hero" style="position:absolute;inset:0;"></div>
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a><span class="sep">/</span>About</div>
+      <h1 class="reveal">About Tavrida Inc</h1>
+      <p class="lead reveal reveal-delay-1">A carrier built by people who understand the road. We move freight reliably across 48 states, with a team that treats every load like it's our own.</p>
+    </div>
+  </section>
+
+  <!-- COMPANY STORY -->
+  <section class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <div class="eyebrow">Our Story</div>
+          <h2 class="section-h">Built on Experience. Driven by Integrity.</h2>
+          <div class="section-divider"></div>
+          <p>Tavrida Inc was founded in Mansfield, Ohio with a simple mandate: run a trucking operation we'd want to drive for ourselves. That meant building real relationships with shippers, paying owner-operators fairly, and refusing to cut corners on safety or service.</p>
+          <p>Today we operate within the freight networks of some of the largest names in American logistics — moving general dry van freight, temperature-controlled reefer loads, flatbed and step-deck specialty cargo, and providing power-only capacity where shippers need it.</p>
+          <p>Our growth has been deliberate. We hire experienced operators, maintain modern equipment, and back every load with around-the-clock dispatch. The result is a carrier that customers trust to deliver and drivers want to stay with.</p>
+          <a href="/contact/" class="btn btn-primary">Get in Touch</a>
+        </div>
+        <div class="about-img-wrap reveal reveal-delay-2">
+          <!-- TODO: replace with photo of YOUR yard, team, or trucks -->
+          <img src="https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?w=900&auto=format&fit=crop&q=85" alt="Tavrida Inc trucking operations" />
+          <div class="about-badge">
+            <div class="num">OH</div>
+            <div class="lbl">Mansfield, Ohio Based</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES GRID -->
+  <section class="services">
+    <div class="container">
+      <div class="services-header">
+        <div class="reveal">
+          <div class="eyebrow">Our Values</div>
+          <h2 class="section-h">What We Stand For</h2>
+          <div class="section-divider"></div>
+        </div>
+        <p class="section-sub reveal reveal-delay-1">Four principles that shape how we move freight, treat drivers, and work with customers.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-item reveal">
+          <div class="v-num">01</div>
+          <h4>Integrity</h4>
+          <p>Straight talk on rates, lanes, and capacity. No bait-and-switch.</p>
+        </div>
+        <div class="value-item reveal reveal-delay-1">
+          <div class="v-num">02</div>
+          <h4>Reliability</h4>
+          <p>We commit to a load, we deliver it. On time, intact, documented.</p>
+        </div>
+        <div class="value-item reveal reveal-delay-2">
+          <div class="v-num">03</div>
+          <h4>Safety</h4>
+          <p>FMCSA compliant operations, ELD-monitored fleet, zero shortcuts.</p>
+        </div>
+        <div class="value-item reveal reveal-delay-3">
+          <div class="v-num">04</div>
+          <h4>People First</h4>
+          <p>Drivers are partners, not numbers. Customers are relationships, not transactions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE GRID -->
+  <section class="partners">
+    <div class="container">
+      <div class="partners-hd reveal">
+        <div class="eyebrow">Operating Standards</div>
+        <h2 class="section-h">How We Run the Business</h2>
+        <div class="section-divider"></div>
+        <p class="section-sub">Operational discipline is what separates a reliable carrier from one that just shows up most of the time.</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Federal Compliance</h3>
+          <p>DOT-registered, FMCSA-compliant, fully insured. Every driver and every truck meets federal standards without exception.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <h3>ELD-Monitored Fleet</h3>
+          <p>Electronic logging across the entire fleet. Hours-of-service tracked in real time, with dispatch support to keep drivers compliant.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3>Around-the-Clock Dispatch</h3>
+          <p>Real people answering real phones — 24 hours a day, 7 days a week. No outsourced call centers, no automated runarounds.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <h3>Trusted Networks</h3>
+          <p>Approved capacity for Amazon Relay, JB Hunt, USPS, UPS, and FedEx — vetted by the most demanding shippers in the country.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3>Experienced Operators</h3>
+          <p>Our drivers have real road miles behind them. We hire for judgment as much as for licenses.</p>
+        </div>
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <h3>Modern Equipment</h3>
+          <p>Well-maintained tractors and trailers across the fleet. Regular preventative maintenance, not reactive repairs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <div class="cta-strip">
+    <div class="cta-strip-inner">
+      <div>
+        <h2>Want to Work With Us?</h2>
+        <p>Whether you're a shipper, broker, or owner-operator — we'd like to hear from you.</p>
+      </div>
+      <a href="/contact/" class="btn">Contact Tavrida</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="/Tavrida_Logo_2.png" alt="Tavrida Inc Logo" />
+            TAVRIDA INC
+          </div>
+          <p>Trusted interstate trucking and freight logistics across the United States. Power-only, dry van, reefer, and open deck — backed by 24/7 support and a team that delivers.</p>
+          <div class="dot-list"><span>FMCSA Compliant</span><span>DOT Registered</span><span>Fully Insured</span></div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/services/#power-only">Power Only</a></li>
+            <li><a href="/services/#dry-van">Dry Van</a></li>
+            <li><a href="/services/#reefer">Reefer</a></li>
+            <li><a href="/services/#open-deck">Open Deck</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/partners/">Our Partners</a></li>
+            <li><a href="/why/">Why Tavrida</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="fcr"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.53 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 5.55 5.55l.91-.91a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:2394707345">(239) 470-7345</a></div>
+          <div class="fcr"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>379 Lexington Ave<br>Mansfield, OH 44907</span></div>
+          <div class="fcr"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Dispatch available 24/7</span></div>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tavrida Inc. All rights reserved. Mansfield, Ohio.</p>
+        <div class="footer-btm-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
+      else io.observe(el);
+    });
+  </script>
+</body>
+</html>
