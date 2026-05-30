@@ -24,7 +24,8 @@
   <meta name="twitter:image" content="https://tavridainc.us/assets/img/about.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Source+Sans+3:ital,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Source+Sans+3:ital,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Source+Sans+3:ital,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&display=swap" /></noscript>
   <link rel="icon" type="image/png" href="/Tavrida_Logo_2.png" />
   <link rel="stylesheet" href="/assets/css/site.css" />
 </head>
@@ -60,6 +61,8 @@
     </div>
   </nav>
 
+  <main>
+
   <!-- PAGE HERO -->
   <section class="page-hero" style="--bg:url('/assets/img/about.jpg');">
     <div class="container">
@@ -84,7 +87,7 @@
           <a href="/contact/" class="btn btn-primary">Get in Touch</a>
         </div>
         <div class="about-img-wrap reveal-right reveal-delay-2">
-          <img src="/assets/img/about.jpg" alt="American semi truck at a logistics yard"  loading="lazy" decoding="async" />
+          <picture><source type="image/webp" srcset="/assets/img/about.webp"><img src="/assets/img/about.jpg" alt="American semi truck at a logistics yard"  loading="lazy" decoding="async" width="1100" height="1650"/></picture>
           <div class="about-badge">
             <div class="num">OH</div>
             <div class="lbl">Mansfield, Ohio Based</div>
@@ -186,6 +189,7 @@
   </div>
 
   <!-- FOOTER -->
+  </main>
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">

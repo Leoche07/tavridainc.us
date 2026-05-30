@@ -35,9 +35,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Source+Sans+3:ital,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Source+Sans+3:ital,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Source+Sans+3:ital,wght@0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,300&display=swap" /></noscript>
   <link rel="icon" type="image/png" href="/Tavrida_Logo_2.png" />
-  <link rel="preload" as="image" href="/assets/img/hero.jpg" />
+  <link rel="preload" as="image" href="/assets/img/hero.webp" type="image/webp" />
   <link rel="stylesheet" href="/assets/css/site.css" />
 
   <!-- Structured data: brand + local business -->
@@ -156,9 +157,11 @@
     </div>
   </nav>
 
+  <main>
+
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-bg" style="background-image: url('/assets/img/hero.jpg');"></div>
+    <div class="hero-bg"></div>
 
     <div class="container">
       <div class="hero-content">
@@ -237,7 +240,7 @@
           </div>
         </div>
         <div class="about-img-wrap reveal-right reveal-delay-2">
-          <img src="/assets/img/about.jpg" alt="American semi truck on a logistics yard"  loading="lazy" decoding="async" />
+          <picture><source type="image/webp" srcset="/assets/img/about.webp"><img src="/assets/img/about.jpg" alt="American semi truck on a logistics yard"  loading="lazy" decoding="async" width="1100" height="1650"/></picture>
           <div class="about-badge">
             <div class="num">24/7</div>
             <div class="lbl">Operations Support</div>
@@ -265,7 +268,7 @@
             <div class="svc-num">Service 01</div>
             <h3>Power Only</h3>
             <p>We provide the tractor — you provide the trailer. Our power-only operations run within established networks, giving drivers consistent lanes and stable income without trailer ownership overhead.</p>
-            <a href="/services/#power-only" class="btn-ghost">Learn more</a>
+            <a href="/services/#power-only" class="btn-ghost" aria-label="Learn more about Power Only freight service">Learn more</a>
           </div>
         </div>
         <div class="svc-card reveal reveal-delay-1">
@@ -274,7 +277,7 @@
             <div class="svc-num">Service 02</div>
             <h3>Dry Van</h3>
             <p>General freight hauling in fully enclosed 53' trailers. Suitable for palletized goods, consumer products, manufacturing components, and retail distribution — protected, on schedule, across 48 states.</p>
-            <a href="/services/#dry-van" class="btn-ghost">Learn more</a>
+            <a href="/services/#dry-van" class="btn-ghost" aria-label="Learn more about Dry Van freight service">Learn more</a>
           </div>
         </div>
         <div class="svc-card reveal reveal-delay-2">
@@ -283,7 +286,7 @@
             <div class="svc-num">Service 03</div>
             <h3>Reefer</h3>
             <p>Temperature-controlled transport for perishables, pharmaceuticals, and specialty goods. Maintaining precise conditions from pickup through final delivery is a standard we don't compromise on.</p>
-            <a href="/services/#reefer" class="btn-ghost">Learn more</a>
+            <a href="/services/#reefer" class="btn-ghost" aria-label="Learn more about Reefer freight service">Learn more</a>
           </div>
         </div>
         <div class="svc-card reveal reveal-delay-3">
@@ -292,7 +295,7 @@
             <div class="svc-num">Service 04</div>
             <h3>Open Deck</h3>
             <p>Flatbed and step-deck solutions for oversized, heavy, or irregularly shaped loads. Construction materials, industrial machinery, and specialized equipment hauled safely and compliantly.</p>
-            <a href="/services/#open-deck" class="btn-ghost">Learn more</a>
+            <a href="/services/#open-deck" class="btn-ghost" aria-label="Learn more about Open Deck freight service">Learn more</a>
           </div>
         </div>
       </div>
@@ -448,7 +451,7 @@
 
   <!-- PHOTO BAND -->
   <div class="photo-band">
-    <img src="/assets/img/band.jpg" alt="American semi truck on the interstate"  loading="lazy" decoding="async" />
+    <picture><source type="image/webp" srcset="/assets/img/band.webp"><img src="/assets/img/band.jpg" alt="American semi truck on the interstate"  loading="lazy" decoding="async" width="1600" height="1067"/></picture>
     <div class="photo-band-overlay">
       <div class="photo-band-text reveal-left">
         <h2>Ready to Move <span class="accent">Your Freight?</span></h2>
@@ -484,7 +487,7 @@
           <div class="mt-2"><a href="/why/" class="btn btn-cyan">See All Reasons</a></div>
         </div>
         <div class="why-photo reveal-right reveal-delay-2">
-          <img src="/assets/img/mechanic.jpg" alt="Truck technician performing maintenance on a semi truck"  loading="lazy" decoding="async" />
+          <picture><source type="image/webp" srcset="/assets/img/mechanic.webp"><img src="/assets/img/mechanic.jpg" alt="Truck technician performing maintenance on a semi truck"  loading="lazy" decoding="async" width="1200" height="674"/></picture>
         </div>
       </div>
     </div>
@@ -502,6 +505,7 @@
   </div>
 
   <!-- FOOTER -->
+  </main>
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
