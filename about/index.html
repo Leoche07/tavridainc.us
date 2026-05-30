@@ -16,7 +16,7 @@
   <div class="topbar">
     <div class="topbar-inner">
       <div class="topbar-left">
-        <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 24/7 Dispatch Available</span>
+        <span><span class="live-dot"></span> 24/7 Dispatch Available</span>
         <span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Mansfield, OH — Serving 48 States</span>
       </div>
       <div class="topbar-right">
@@ -44,31 +44,30 @@
   </nav>
 
   <!-- PAGE HERO -->
-  <section class="page-hero" style="--bg:url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1920&auto=format&fit=crop&q=85');">
-    <div class="page-hero" style="position:absolute;inset:0;"></div>
+  <section class="page-hero" style="--bg:url('/assets/img/about.jpg');">
     <div class="container">
       <div class="breadcrumb"><a href="/">Home</a><span class="sep">/</span>About</div>
-      <h1 class="reveal">About Tavrida Inc</h1>
+      <h1 class="reveal">About <span class="accent">Tavrida Inc</span></h1>
       <p class="lead reveal reveal-delay-1">A carrier built by people who understand the road. We move freight reliably across 48 states, with a team that treats every load like it's our own.</p>
     </div>
+    <div class="page-hero-truck" data-truck="page-hero" aria-hidden="true"></div>
   </section>
 
   <!-- COMPANY STORY -->
   <section class="about">
     <div class="container">
       <div class="about-grid">
-        <div class="about-copy reveal">
+        <div class="about-copy reveal-left">
           <div class="eyebrow">Our Story</div>
-          <h2 class="section-h">Built on Experience. Driven by Integrity.</h2>
+          <h2 class="section-h">Built on Experience. <span class="accent">Driven by Integrity.</span></h2>
           <div class="section-divider"></div>
           <p>Tavrida Inc was founded in Mansfield, Ohio with a simple mandate: run a trucking operation we'd want to drive for ourselves. That meant building real relationships with shippers, paying owner-operators fairly, and refusing to cut corners on safety or service.</p>
           <p>Today we operate within the freight networks of some of the largest names in American logistics — moving general dry van freight, temperature-controlled reefer loads, flatbed and step-deck specialty cargo, and providing power-only capacity where shippers need it.</p>
           <p>Our growth has been deliberate. We hire experienced operators, maintain modern equipment, and back every load with around-the-clock dispatch. The result is a carrier that customers trust to deliver and drivers want to stay with.</p>
           <a href="/contact/" class="btn btn-primary">Get in Touch</a>
         </div>
-        <div class="about-img-wrap reveal reveal-delay-2">
-          <!-- TODO: replace with photo of YOUR yard, team, or trucks -->
-          <img src="https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?w=900&auto=format&fit=crop&q=85" alt="Tavrida Inc trucking operations" />
+        <div class="about-img-wrap reveal-right reveal-delay-2">
+          <img src="/assets/img/about.jpg" alt="American semi truck at a logistics yard" />
           <div class="about-badge">
             <div class="num">OH</div>
             <div class="lbl">Mansfield, Ohio Based</div>
@@ -84,7 +83,7 @@
       <div class="services-header">
         <div class="reveal">
           <div class="eyebrow">Our Values</div>
-          <h2 class="section-h">What We Stand For</h2>
+          <h2 class="section-h">What We <span class="accent">Stand For</span></h2>
           <div class="section-divider"></div>
         </div>
         <p class="section-sub reveal reveal-delay-1">Four principles that shape how we move freight, treat drivers, and work with customers.</p>
@@ -117,11 +116,11 @@
   <!-- FEATURE GRID -->
   <section class="partners">
     <div class="container">
-      <div class="partners-hd reveal">
+      <div class="partners-hd center reveal">
         <div class="eyebrow">Operating Standards</div>
-        <h2 class="section-h">How We Run the Business</h2>
-        <div class="section-divider"></div>
-        <p class="section-sub">Operational discipline is what separates a reliable carrier from one that just shows up most of the time.</p>
+        <h2 class="section-h">How We Run <span class="accent">the Business</span></h2>
+        <div class="section-divider section-divider-center"></div>
+        <p class="section-sub" style="margin: 0 auto;">Operational discipline is what separates a reliable carrier from one that just shows up most of the time.</p>
       </div>
       <div class="feature-grid">
         <div class="feature-card reveal">
@@ -214,15 +213,6 @@
     </div>
   </footer>
 
-  <script>
-    function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => {
-      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
-      else io.observe(el);
-    });
-  </script>
+  <script src="/assets/js/site.js"></script>
 </body>
 </html>

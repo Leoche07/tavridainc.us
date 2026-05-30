@@ -16,7 +16,7 @@
   <div class="topbar">
     <div class="topbar-inner">
       <div class="topbar-left">
-        <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 24/7 Dispatch Available</span>
+        <span><span class="live-dot"></span> 24/7 Dispatch Available</span>
         <span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Mansfield, OH — Serving 48 States</span>
       </div>
       <div class="topbar-right">
@@ -43,19 +43,20 @@
     </div>
   </nav>
 
-  <section class="page-hero">
+  <section class="page-hero" style="--bg:url('/assets/img/band.jpg');">
     <div class="container">
       <div class="breadcrumb"><a href="/">Home</a><span class="sep">/</span>Services</div>
-      <h1 class="reveal">Freight Services Built for Every Load</h1>
+      <h1 class="reveal">Freight Services Built for <span class="accent">Every Load</span></h1>
       <p class="lead reveal reveal-delay-1">From power-only contract lanes to temperature-sensitive reefer and oversized flatbed work — we have the right equipment, the right people, and the right experience for the job.</p>
     </div>
+    <div class="page-hero-truck" data-truck="page-hero" aria-hidden="true"></div>
   </section>
 
   <!-- POWER ONLY -->
   <section class="svc-detail" id="power-only">
     <div class="container">
       <div class="svc-detail-grid">
-        <div class="reveal">
+        <div class="reveal-left">
           <div class="eyebrow">Service 01</div>
           <h2>Power Only</h2>
           <div class="section-divider"></div>
@@ -72,10 +73,10 @@
           </div>
           <div class="mt-2"><a href="/contact/" class="btn btn-primary">Inquire About Power Only</a></div>
         </div>
-        <div class="svc-detail-img reveal reveal-delay-2">
+        <div class="svc-detail-illust reveal-right reveal-delay-2">
           <div class="svc-detail-tag">Power Only</div>
-          <!-- TODO: driver hooking up tractor to trailer (5th wheel) -->
-          <img src="https://images.unsplash.com/photo-1586191582056-b7f0fee47e7e?w=1100&auto=format&fit=crop&q=85" alt="Driver hooking up a tractor to a trailer" />
+          <div class="ground"></div>
+          <div data-truck="power-only" aria-hidden="true"></div>
         </div>
       </div>
     </div>
@@ -85,7 +86,7 @@
   <section class="svc-detail" id="dry-van">
     <div class="container">
       <div class="svc-detail-grid reverse">
-        <div class="reveal">
+        <div class="reveal-right">
           <div class="eyebrow">Service 02</div>
           <h2>Dry Van</h2>
           <div class="section-divider"></div>
@@ -103,10 +104,10 @@
           <div class="svc-pricing mt-2">Trailer rental from $500/month — maintenance & insurance included</div>
           <div class="mt-2"><a href="/contact/" class="btn btn-primary">Inquire About Dry Van</a></div>
         </div>
-        <div class="svc-detail-img reveal reveal-delay-2">
+        <div class="svc-detail-illust reveal-left reveal-delay-2">
           <div class="svc-detail-tag">Dry Van</div>
-          <!-- TODO: 53' enclosed dry van trailer (NOT the same photo as hero or power only) -->
-          <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1100&auto=format&fit=crop&q=85" alt="Dry van enclosed trailer on the highway" />
+          <div class="ground"></div>
+          <div data-truck="dry-van" aria-hidden="true"></div>
         </div>
       </div>
     </div>
@@ -116,7 +117,7 @@
   <section class="svc-detail" id="reefer">
     <div class="container">
       <div class="svc-detail-grid">
-        <div class="reveal">
+        <div class="reveal-left">
           <div class="eyebrow">Service 03</div>
           <h2>Reefer</h2>
           <div class="section-divider"></div>
@@ -134,10 +135,10 @@
           <div class="svc-pricing mt-2">Trailer rental from $1,500/month</div>
           <div class="mt-2"><a href="/contact/" class="btn btn-primary">Inquire About Reefer</a></div>
         </div>
-        <div class="svc-detail-img reveal reveal-delay-2">
+        <div class="svc-detail-illust reveal-right reveal-delay-2">
           <div class="svc-detail-tag">Reefer</div>
-          <!-- TODO: refrigerated trailer with visible Carrier/Thermo King reefer unit on front -->
-          <img src="https://images.unsplash.com/photo-1611288875785-f10a3a2efcec?w=1100&auto=format&fit=crop&q=85" alt="Refrigerated reefer trailer with cooling unit" />
+          <div class="ground"></div>
+          <div data-truck="reefer" aria-hidden="true"></div>
         </div>
       </div>
     </div>
@@ -147,7 +148,7 @@
   <section class="svc-detail" id="open-deck">
     <div class="container">
       <div class="svc-detail-grid reverse">
-        <div class="reveal">
+        <div class="reveal-right">
           <div class="eyebrow">Service 04</div>
           <h2>Open Deck</h2>
           <div class="section-divider"></div>
@@ -165,10 +166,10 @@
           <div class="svc-pricing mt-2">Trailer rental from $1,500/month</div>
           <div class="mt-2"><a href="/contact/" class="btn btn-primary">Inquire About Open Deck</a></div>
         </div>
-        <div class="svc-detail-img reveal reveal-delay-2">
+        <div class="svc-detail-illust reveal-left reveal-delay-2">
           <div class="svc-detail-tag">Open Deck</div>
-          <!-- TODO: flatbed trailer with strapped/tarped cargo (lumber, steel, machinery) -->
-          <img src="https://images.unsplash.com/photo-1635868167930-b1c8a45a8c92?w=1100&auto=format&fit=crop&q=85" alt="Flatbed open deck trailer with secured cargo" />
+          <div class="ground"></div>
+          <div data-truck="open-deck" aria-hidden="true"></div>
         </div>
       </div>
     </div>
@@ -177,11 +178,11 @@
   <!-- FAQ / EQUIPMENT NOTE -->
   <section class="partners">
     <div class="container">
-      <div class="partners-hd reveal">
+      <div class="partners-hd center reveal">
         <div class="eyebrow">Equipment & Operations</div>
-        <h2 class="section-h">More Than Just Trucks</h2>
-        <div class="section-divider"></div>
-        <p class="section-sub">What every Tavrida load includes — regardless of service type.</p>
+        <h2 class="section-h">More Than <span class="accent">Just Trucks</span></h2>
+        <div class="section-divider section-divider-center"></div>
+        <p class="section-sub" style="margin: 0 auto;">What every Tavrida load includes — regardless of service type.</p>
       </div>
       <div class="feature-grid">
         <div class="feature-card reveal">
@@ -254,15 +255,6 @@
     </div>
   </footer>
 
-  <script>
-    function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => {
-      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
-      else io.observe(el);
-    });
-  </script>
+  <script src="/assets/js/site.js"></script>
 </body>
 </html>

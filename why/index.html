@@ -16,7 +16,7 @@
   <div class="topbar">
     <div class="topbar-inner">
       <div class="topbar-left">
-        <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 24/7 Dispatch Available</span>
+        <span><span class="live-dot"></span> 24/7 Dispatch Available</span>
         <span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Mansfield, OH — Serving 48 States</span>
       </div>
       <div class="topbar-right">
@@ -43,21 +43,22 @@
     </div>
   </nav>
 
-  <section class="page-hero">
+  <section class="page-hero" style="--bg:url('/assets/img/hero.jpg');">
     <div class="container">
       <div class="breadcrumb"><a href="/">Home</a><span class="sep">/</span>Why Tavrida</div>
-      <h1 class="reveal">Why Work With Tavrida</h1>
+      <h1 class="reveal">Why Work With <span class="accent">Tavrida</span></h1>
       <p class="lead reveal reveal-delay-1">Trucking is a hard business done well by very few. Here's what makes us a carrier worth working with — whether you're a shipper, a broker, or an owner-operator looking for steady work.</p>
     </div>
+    <div class="page-hero-truck" data-truck="page-hero" aria-hidden="true"></div>
   </section>
 
   <!-- WHY GRID -->
   <section class="why">
     <div class="container">
       <div class="why-layout">
-        <div class="reveal">
+        <div class="reveal-left">
           <div class="eyebrow">What Sets Us Apart</div>
-          <h2 class="section-h">The Tavrida Difference</h2>
+          <h2 class="section-h">The Tavrida <span class="accent">Difference</span></h2>
           <div class="section-divider"></div>
           <p class="section-sub">We are a carrier with established relationships, real support, and a team invested in getting every load where it needs to go — safely and on time.</p>
           <div class="why-list">
@@ -87,9 +88,8 @@
             </div>
           </div>
         </div>
-        <div class="why-photo reveal reveal-delay-2">
-          <!-- TODO: a mechanic actively working on a TRUCK (engine bay, under hood, brake job) — NOT a trailer, NOT "holding a disc" -->
-          <img src="https://images.unsplash.com/photo-1632757131395-7b86fc9b0fd4?w=900&auto=format&fit=crop&q=85" alt="Truck technician performing maintenance on a semi truck" />
+        <div class="why-photo reveal-right reveal-delay-2">
+          <img src="/assets/img/mechanic.jpg" alt="Truck technician performing maintenance under a semi truck" />
         </div>
       </div>
     </div>
@@ -98,11 +98,11 @@
   <!-- DRIVER BENEFITS -->
   <section class="partners">
     <div class="container">
-      <div class="partners-hd reveal">
+      <div class="partners-hd center reveal">
         <div class="eyebrow">For Owner-Operators</div>
-        <h2 class="section-h">Why Drivers Stay With Us</h2>
-        <div class="section-divider"></div>
-        <p class="section-sub">The trucking industry has a turnover problem. We don't. Here's why drivers in our network stick around.</p>
+        <h2 class="section-h">Why Drivers <span class="accent">Stay With Us</span></h2>
+        <div class="section-divider section-divider-center"></div>
+        <p class="section-sub" style="margin: 0 auto;">The trucking industry has a turnover problem. We don't. Here's why drivers in our network stick around.</p>
       </div>
       <div class="feature-grid">
         <div class="feature-card reveal">
@@ -141,11 +141,10 @@
 
   <!-- COMPLIANCE STRIP -->
   <div class="photo-band">
-    <!-- TODO: a clean truck in motion or at a yard (no castles, no containers) -->
-    <img src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=1920&auto=format&fit=crop&q=85" alt="Semi truck on the interstate" />
+    <img src="/assets/img/band.jpg" alt="American semi truck on the interstate" />
     <div class="photo-band-overlay">
-      <div class="photo-band-text">
-        <h2>Compliance Is the Floor, Not the Ceiling</h2>
+      <div class="photo-band-text reveal-left">
+        <h2>Compliance Is <span class="accent">the Floor</span>, Not the Ceiling</h2>
         <p>FMCSA compliance, DOT registration, full insurance, ELD-monitored fleet, clean safety scores. The baseline — not the brag.</p>
         <a href="/contact/" class="btn btn-primary">Start a Conversation</a>
       </div>
@@ -203,15 +202,6 @@
     </div>
   </footer>
 
-  <script>
-    function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => {
-      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
-      else io.observe(el);
-    });
-  </script>
+  <script src="/assets/js/site.js"></script>
 </body>
 </html>

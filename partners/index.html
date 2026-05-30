@@ -16,7 +16,7 @@
   <div class="topbar">
     <div class="topbar-inner">
       <div class="topbar-left">
-        <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 24/7 Dispatch Available</span>
+        <span><span class="live-dot"></span> 24/7 Dispatch Available</span>
         <span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Mansfield, OH — Serving 48 States</span>
       </div>
       <div class="topbar-right">
@@ -43,12 +43,13 @@
     </div>
   </nav>
 
-  <section class="page-hero">
+  <section class="page-hero" style="--bg:url('/assets/img/about.jpg');">
     <div class="container">
       <div class="breadcrumb"><a href="/">Home</a><span class="sep">/</span>Partners</div>
-      <h1 class="reveal">Trusted by Industry Leaders</h1>
+      <h1 class="reveal">Trusted by <span class="accent">Industry Leaders</span></h1>
       <p class="lead reveal reveal-delay-1">We operate within established freight networks, providing reliable capacity for the largest logistics organizations in the country.</p>
     </div>
+    <div class="page-hero-truck" data-truck="page-hero" aria-hidden="true"></div>
   </section>
 
   <!-- PARTNER CARDS GRID -->
@@ -85,11 +86,11 @@
   </section>
 
   <!-- DETAIL ROWS -->
-  <section style="background: var(--bg-alt); padding: 5rem 0; border-top: 1px solid var(--border-gold); border-bottom: 1px solid var(--border-gold);">
+  <section style="background: var(--bg-alt); padding: 5rem 0; border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft);">
     <div class="container">
       <div class="partners-hd reveal">
         <div class="eyebrow">Partner Network Detail</div>
-        <h2 class="section-h">How We Work With Each Network</h2>
+        <h2 class="section-h">How We Work With <span class="accent">Each Network</span></h2>
         <div class="section-divider"></div>
       </div>
 
@@ -148,10 +149,10 @@
   <!-- WHY PARTNERSHIPS MATTER -->
   <section class="partners">
     <div class="container">
-      <div class="partners-hd reveal">
+      <div class="partners-hd center reveal">
         <div class="eyebrow">Why It Matters</div>
-        <h2 class="section-h">What These Partnerships Mean for You</h2>
-        <div class="section-divider"></div>
+        <h2 class="section-h">What These Partnerships <span class="accent">Mean for You</span></h2>
+        <div class="section-divider section-divider-center"></div>
       </div>
       <div class="feature-grid">
         <div class="feature-card reveal">
@@ -224,15 +225,6 @@
     </div>
   </footer>
 
-  <script>
-    function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => {
-      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
-      else io.observe(el);
-    });
-  </script>
+  <script src="/assets/js/site.js"></script>
 </body>
 </html>

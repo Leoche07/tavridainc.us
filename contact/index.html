@@ -16,7 +16,7 @@
   <div class="topbar">
     <div class="topbar-inner">
       <div class="topbar-left">
-        <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 24/7 Dispatch Available</span>
+        <span><span class="live-dot"></span> 24/7 Dispatch Available</span>
         <span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Mansfield, OH — Serving 48 States</span>
       </div>
       <div class="topbar-right">
@@ -43,21 +43,22 @@
     </div>
   </nav>
 
-  <section class="page-hero">
+  <section class="page-hero" style="--bg:url('/assets/img/band.jpg');">
     <div class="container">
       <div class="breadcrumb"><a href="/">Home</a><span class="sep">/</span>Contact</div>
-      <h1 class="reveal">Let's Talk Freight</h1>
+      <h1 class="reveal">Let's Talk <span class="accent">Freight</span></h1>
       <p class="lead reveal reveal-delay-1">Whether you're a shipper with a load to move, a broker looking for capacity, or an owner-operator looking for steady work — we'd like to hear from you. We respond fast.</p>
     </div>
+    <div class="page-hero-truck" data-truck="page-hero" aria-hidden="true"></div>
   </section>
 
   <!-- CONTACT -->
   <section class="contact">
     <div class="container">
       <div class="contact-grid">
-        <div class="contact-info reveal">
+        <div class="contact-info reveal-left">
           <div class="eyebrow">Reach Us</div>
-          <h2 class="section-h">Direct Contact</h2>
+          <h2 class="section-h">Direct <span class="accent">Contact</span></h2>
           <div class="section-divider"></div>
           <p class="lead">No call trees, no offshore call center. You get a real person, every time.</p>
           <div class="cinfo-item">
@@ -74,11 +75,10 @@
           </div>
           <div class="cinfo-item">
             <div class="cinfo-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-            <!-- TODO: replace with real email address -->
             <div><div class="cinfo-label">Email</div><div class="cinfo-value"><a href="mailto:dispatch@tavridainc.us">dispatch@tavridainc.us</a></div></div>
           </div>
         </div>
-        <div class="reveal reveal-delay-2">
+        <div class="reveal-right reveal-delay-2">
           <div class="contact-form">
             <h3>Send Us a Message</h3>
             <p class="sub">Fill out the form and we'll be in touch within one business day. For urgent freight, call dispatch directly.</p>
@@ -109,10 +109,10 @@
   <!-- THREE-WAY CTA -->
   <section class="partners">
     <div class="container">
-      <div class="partners-hd reveal">
+      <div class="partners-hd center reveal">
         <div class="eyebrow">Who We Work With</div>
-        <h2 class="section-h">Three Conversations We Love Having</h2>
-        <div class="section-divider"></div>
+        <h2 class="section-h">Three Conversations <span class="accent">We Love Having</span></h2>
+        <div class="section-divider section-divider-center"></div>
       </div>
       <div class="feature-grid">
         <div class="feature-card reveal">
@@ -185,20 +185,13 @@
     </div>
   </footer>
 
+  <script src="/assets/js/site.js"></script>
   <script>
-    function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => {
-      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
-      else io.observe(el);
-    });
     function handleSubmit(e) {
       e.preventDefault();
       const btn = e.target;
       btn.textContent = "Message Sent — We'll Be in Touch";
-      btn.style.background = '#276749';
+      btn.style.background = '#22c55e';
       setTimeout(() => { btn.textContent = 'Send Message'; btn.style.background = ''; }, 4000);
     }
   </script>
